@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/Workflow-CI-Steven-C-Michael/Workflow-CI-Steven-C-Michael/mlruns/0/36df6873f9c34a06be1b6c37fc50e5a0/artifacts
+end_time: 1750241706782
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 36df6873f9c34a06be1b6c37fc50e5a0
+run_name: skillful-eel-832
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750241700576
+status: 3
+tags: []
+user_id: runner
