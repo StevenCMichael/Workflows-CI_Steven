@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  CSV_URL: "MLproject/train_pca.csv"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12.7"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install mlflow
+
+      - name: Run MLflow Project
+        run: |
+          mlflow run MLproject --env-manager=local
+
+      - name: Save mlruns to repo
+        run: |
+          git config --global user.name ${{ secrets.username }}
+          git config --global user.email ${{ secrets.email }}
+          git add mlruns/
+          git commit -m "Save mlruns"
+          git push origin main
+
+      # Docker setup & push
+      - name: Install Docker CLI
+        uses: docker/setup-buildx-action@v2
+
+      - name: Log in to DockerHub
+        run: |
+          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+      - name: Build Docker image with MLflow
+        run: |
+          mlflow models build-docker -m mlruns/0/<run_id>/artifacts/model -n mymodel
+
+      - name: Push Docker image to DockerHub
+        run: |
+          docker tag mymodel ${{ secrets.DOCKER_USERNAME }}/mymodel:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/mymodel:latest
