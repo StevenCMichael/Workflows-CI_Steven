@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/Workflow-CI-Steven-C-Michael/Workflow-CI-Steven-C-Michael/mlruns/0/7f84eac180834711a2d17677cd47f1ab/artifacts
+end_time: 1750242181412
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7f84eac180834711a2d17677cd47f1ab
+run_name: sincere-owl-470
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750242175343
+status: 3
+tags: []
+user_id: runner
