@@ -1,4 +1,4 @@
-name: CI
+name: CI-MSML
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - main
 
 env:
-  CSV_URL: "MLproject/train_pca.csv"
+  CSV_URL: "MLproject/cleaned_banana_quality.csv"
 
 jobs:
   build:
