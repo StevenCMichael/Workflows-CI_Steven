@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/Workflows-CI_Steven/Workflows-CI_Steven/mlruns/0/e1abe9af582b426db92f25cb764d362a/artifacts
+end_time: 1750243123416
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e1abe9af582b426db92f25cb764d362a
+run_name: silent-colt-879
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750243117168
+status: 3
+tags: []
+user_id: runner
