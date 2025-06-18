@@ -1,0 +1,14 @@
+artifact_uri: file:///home/runner/work/Workflows-CI_Steven/Workflows-CI_Steven/mlruns/0/60d7ec0950fe4715aecd93c4e2d276b4/artifacts
+end_time: 1750243666515
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 60d7ec0950fe4715aecd93c4e2d276b4
+run_name: intrigued-bat-740
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750243660397
+status: 3
+tags: []
+user_id: runner

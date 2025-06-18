@@ -1,0 +1,37 @@
+artifact_path: file:///home/runner/work/Workflows-CI_Steven/Workflows-CI_Steven/mlruns/0/models/m-6b365735ebb44f329118c4c54fdf4224/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.7
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.0
+is_signature_from_type_hint: false
+mlflow_version: 3.1.0
+model_id: m-6b365735ebb44f329118c4c54fdf4224
+model_size_bytes: 3179751
+model_uuid: m-6b365735ebb44f329118c4c54fdf4224
+prompts: null
+run_id: 60d7ec0950fe4715aecd93c4e2d276b4
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "Size", "required": true}, {"type": "double",
+    "name": "Weight", "required": true}, {"type": "double", "name": "Sweetness", "required":
+    true}, {"type": "double", "name": "Softness", "required": true}, {"type": "double",
+    "name": "HarvestTime", "required": true}, {"type": "double", "name": "Ripeness",
+    "required": true}, {"type": "double", "name": "Acidity", "required": true}]'
+  outputs: '[{"type": "long", "required": true}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-06-18 10:47:42.957481'
